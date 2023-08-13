@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <div class="burger-fitler"></div>
+
     <header class="header">
         <div class="container">
             <h1 class="header-title">
@@ -38,6 +40,11 @@
                 </nav>
                 <div class="header__right-profile">
                     <img src="img/icons/icon_profile.svg" alt="icon profile">
+                </div>
+                <div class="nav__open">
+                    <div class="nav__open-btn">
+                        <div class="btn-elem"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,6 +88,12 @@
                 <div class="pagination">
                     <ul class="pagination__list">
                         <li class="pagination__list-item active">
+                            <span></span>
+                        </li>
+                        <li class="pagination__list-item">
+                            <span></span>
+                        </li>
+                        <li class="pagination__list-item">
                             <span></span>
                         </li>
                         <li class="pagination__list-item">
@@ -215,7 +228,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- spring -->
             <div style="display: none;" class="favorites__content">
                 <div class="favorites__content-item">
@@ -306,7 +318,7 @@
                         </h3>
                         <h3 class="favorites__item-name">
                             <span>Crude: A Memoir</span>
-                            <span>By Pablo Fajardo & ​​Sophie Tardy-Joubert</span>
+                            <span>By Pablo Fajardo & Sophie Tardy-Joubert</span>
                         </h3>
                         <p class="favorites__item-article">
                             Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger
@@ -517,7 +529,7 @@
                     <h3 class="coffee__item-title right">
                         Desserts & Cakes
                     </h3>
-                    <ul class="coffee__list">
+                    <ul class="coffee__list coffee__list-second">
                         <li class="coffee__list-item">
                             <h4 class="coffee-name coffee-right">Forest Gateau</h4>
                             <div class="coffee-line"></div>
@@ -554,6 +566,8 @@
         </div>
     </section>
 
+
+
     <section id="contacts" class="contacts">
         <div class="container">
             <h2 class="main-title">
@@ -566,13 +580,13 @@
                     </h3>
                     <ul class="contacts__list">
                         <li class="contacts__list-item">
-                            Please call <a href="tel:+(617) 730-2370">(617) 730-2370</a>
+                            Please call <a href="tel:+6177302370">(617) 730-2370</a>
                         </li>
                         <li class="contacts__list-item">
-                            For TTY service, please call <a href="tel:+(617) 730-2370">(617) 730-2370</a>
+                            For TTY service, please call <a href="tel:+6177302370">(617) 730-2370</a>
                         </li>
                         <li class="contacts__list-item">
-                            Putterham Library: <a href="tel:+(617) 730-2385">(617) 730-2385</a>
+                            Putterham Library: <a href="tel:+6177302385">(617) 730-2385</a>
                         </li>
                     </ul>
                     <h3 class="contacts__content-title">Senior Staff</h3>
@@ -634,9 +648,79 @@
                         </div>
                     </form>
                 </div>
+                <div class="card__profile">
+                    <h3 class="card__profile-title">
+                        Get a reader card
+                    </h3>
+                    <p class="card__profile-text">
+                        You will be able to see a reader card after logging into account or you can register a new
+                        account
+                    </p>
+                    <div class="profile__buttons">
+                        <button class="profile__buttons-item">Sign Up</button>
+                        <button class="profile__buttons-item">Log in</button>
+                    </div>
+                </div>
+                <div style="display: none;" class="card__profile">
+                    <h3 class="card__profile-title">
+                        Visit your profile
+                    </h3>
+                    <p class="card__profile-text">
+                        With a digital library card you get free access to the Library’s wide array of digital resources
+                        including e-books, databases, educational resources, and more.
+                    </p>
+                    <div class="profile__buttons">
+                        <button class="profile__buttons-item">Profile</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-box">
+                    <p class="footer-address">286 Cadman Plaza, New York, NY 11238, United States</p>
+                    <ul class="social__list">
+                        <li class="social__list-item">
+                            <a href="#" class="social__list-link">
+                                <img src="img/icons/tw.svg" alt="twitter logo">
+                            </a>
+                        </li>
+                        <li class="social__list-item">
+                            <a href="#" class="social__list-link">
+                                <img src="img/icons/insta.svg" alt="instagram logo">
+                            </a>
+                        </li>
+                        <li class="social__list-item">
+                            <a href="#" class="social__list-link">
+                                <img src="img/icons/facebook.svg" alt="facebook logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <p class="footer-schedule">
+                        <span>Mon - Fri</span>
+                        <span>08:00 am - 07:00 pm</span>
+                    </p>
+                    <p class="footer-schedule">
+                        <span>Sat - Sun</span>
+                        <span>10:00 am - 06:00 pm</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="footer-bottom">
+                <div class="footer-year">2023</div>
+                <a href="https://rs.school/js-stage0/" class="footer-link">The Rolling Scopes School</a>
+                <a href="https://github.com/Sarkor2007" class="footer-link">Sarkor</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
+<script src="scripts/app.js"></script>
 
 </html>
