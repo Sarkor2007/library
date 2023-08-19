@@ -34,7 +34,7 @@
                             <a class="nav__list-link" href="#contacts">Contacts</a>
                         </li>
                         <li class="nav__list-item">
-                            <a class="nav__list-link" href="#card">Library card</a>
+                            <a class="nav__list-link" href="#card">Library Card</a>
                         </li>
                     </ul>
                 </nav>
@@ -50,7 +50,7 @@
         </div>
     </header>
 
-    <section class="welcome">
+    <div class="welcome">
         <div class="container">
             <div class="welcome-content">
                 <p class="welcome-article">
@@ -62,7 +62,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </div>
 
     <section id="about" class="about">
         <div class="container">
@@ -72,39 +72,53 @@
             <p class="about-subtitle">
                 The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
             </p>
-
             <div class="about__carousel">
-                <ul class="carousel__list">
-                    <li class="carousel__list-item">
-                        <img src="img/images/about_carousel/image1.jpg" alt="carousel image 1">
-                    </li>
-                    <li class="carousel__list-item">
-                        <img src="img/images/about_carousel/image2.jpg" alt="carousel image 2">
-                    </li>
-                    <li class="carousel__list-item">
-                        <img src="img/images/about_carousel/image3.jpg" alt="carousel image 3">
-                    </li>
-                </ul>
-                <div class="pagination">
-                    <ul class="pagination__list">
-                        <li class="pagination__list-item active">
-                            <span></span>
+                <div class="carousel-btn carousel-left">
+                    <img src="img/icons/arrow-left.svg" alt="left button">
+                </div>
+                <div class="carousel">
+                    <ul class="carousel__list">
+                        <li class="carousel__list-item">
+                            <img src="img/images/about_carousel/image1.jpg" alt="carousel image 1">
                         </li>
-                        <li class="pagination__list-item">
-                            <span></span>
+                        <li class="carousel__list-item">
+                            <img src="img/images/about_carousel/image2.jpg" alt="carousel image 2">
                         </li>
-                        <li class="pagination__list-item">
-                            <span></span>
+                        <li class="carousel__list-item">
+                            <img src="img/images/about_carousel/image3.jpg" alt="carousel image 3">
                         </li>
-                        <li class="pagination__list-item">
-                            <span></span>
+                        <li class="carousel__list-item">
+                            <img src="img/images/about_carousel/image4.jpg" alt="carousel image 4">
                         </li>
-                        <li class="pagination__list-item">
-                            <span></span>
+                        <li class="carousel__list-item">
+                            <img src="img/images/about_carousel/image5.jpg" alt="carousel image 5">
                         </li>
                     </ul>
+                    <div class="pagination">
+                        <ul class="pagination__list">
+                            <li class="pagination__list-item active">
+                                <span></span>
+                            </li>
+                            <li class="pagination__list-item">
+                                <span></span>
+                            </li>
+                            <li class="pagination__list-item">
+                                <span></span>
+                            </li>
+                            <li class="pagination__list-item">
+                                <span></span>
+                            </li>
+                            <li class="pagination__list-item">
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="carousel-btn carousel-right">
+                    <img src="img/icons/arrow-right.svg" alt="right button">
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -719,8 +733,8 @@
             </div>
         </div>
     </footer>
-</body>
 
-<script src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
 
 </html>

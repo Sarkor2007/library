@@ -292,6 +292,16 @@ body.active {
 
 .about__carousel {
     margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 58px;
+}
+
+.carousel {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .carousel__list {
@@ -299,10 +309,24 @@ body.active {
     height: 560px;
     display: flex;
     gap: 25px;
+    transition: 0.5s ease;
+}
+
+.carousel-btn {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+.carousel-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .carousel__list-item {
-    width: calc(100% / 3 - 25px / 4);
+    min-width: 450px;
+    height: 560px;
 }
 
 .carousel__list-item img {
@@ -322,7 +346,6 @@ body.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
 .pagination__list-item {
@@ -1037,7 +1060,15 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
+@media (max-width: 1440px) {
+    .carousel {
+        width: 920px;
+    }
 
+    .pagination__list-item:nth-child(4) {
+        display: flex;
+    }
+}
 
 @media (max-width: 1250px) {
     .favorites__content {
@@ -1073,25 +1104,6 @@ input[type="number"]::-webkit-outer-spin-button {
         transition: .7s all;
     }
 
-    .pagination__list-item:nth-child(4),
-    .pagination__list-item:nth-child(5) {
-        display: flex;
-    }
-
-    .carousel__list-item:nth-child(2),
-    .carousel__list-item:nth-child(3) {
-        display: none;
-    }
-
-    .carousel__list {
-        justify-content: center;
-    }
-
-    .carousel__list-item {
-        width: 100%;
-        max-width: 450px;
-    }
-
     .coffee__content {
         flex-direction: column;
         gap: 40px;
@@ -1125,8 +1137,26 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
+@media (max-width: 960px) {
+    .carousel {
+        width: 450px;
+    }
+
+    .pagination__list-item:nth-child(5) {
+        display: flex;
+    }
+
+    .carousel-btn {
+        display: inline-block;
+    }
+}
+
 @media (max-width: 768px) {
     .favorites__tab {
         flex-wrap: wrap;
+    }
+
+    .welcome {
+        background-image: url('../img/images/welcome-bg-tablet.jpg');
     }
 }

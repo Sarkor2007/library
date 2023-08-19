@@ -30,3 +30,50 @@ for (let i = 0; i < navLink.length; i++) {
         burgerFilter.classList.remove('active');
     })
 }
+
+
+
+// SLIDER
+const carousel = document.querySelector('.carousel__list');
+const arrowLeft = document.querySelector('.carousel-left');
+const arrowRight = document.querySelector('.carousel-right');
+const pagination = document.querySelectorAll('.pagination__list-item');
+
+let currentItem = 0;
+
+const clearPagination = () => {
+    pagination.forEach((item) => item.classList.remove('active'));
+};
+
+const currentSlide = (item) => {
+    carousel.style.setProperty('margin-left', `${-475 * item}px`);
+};
+
+const changeSlide = (side) => {
+    if (side === 'left' && currentItem > 0) {
+        currentItem--;
+    }
+    if (side === 'right' && currentItem < 4) {
+        currentItem++;
+    }
+    currentSlide(currentItem);
+    clearPagination();
+    pagination[currentItem].classList.add('active');
+};
+
+pagination.forEach((item, index) => {
+    item.addEventListener('click', function () {
+        clearPagination();
+        item.classList.add('active');
+        currentItem = index;
+        currentSlide(index);
+    });
+});
+
+arrowLeft.addEventListener('click', () => {
+    changeSlide('left');
+});
+
+arrowRight.addEventListener('click', () => {
+    changeSlide('right');
+});
