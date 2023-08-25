@@ -31,8 +31,6 @@ for (let i = 0; i < navLink.length; i++) {
     })
 }
 
-
-
 // SLIDER
 const carousel = document.querySelector('.carousel__list');
 const arrowLeft = document.querySelector('.carousel-left');
@@ -76,4 +74,21 @@ arrowLeft.addEventListener('click', () => {
 
 arrowRight.addEventListener('click', () => {
     changeSlide('right');
+});
+
+
+
+const seasonItem = document.querySelectorAll('input[name="radio"]');
+const seasons = document.querySelectorAll('.favorite-season');
+
+seasonItem.forEach(el => {
+    el.addEventListener('change', (e) => {
+        // console.log(el);
+        seasons.forEach(item => {
+            item.classList.remove('active');
+        });
+        if (el.checked) {
+            document.querySelector(`.${el.id}`).classList.add('active');
+        }
+    })
 });

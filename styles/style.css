@@ -482,11 +482,32 @@ input[type='radio']:checked+span {
 
 .favorites__content {
     margin-top: 35px;
+    position: relative;
+}
+
+.favorite-season {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 10px;
     row-gap: 40px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s all ease-out;
 }
+
+.favorite-season.active {
+    position: relative !important;
+    z-index: 10;
+    transition: .4s all ease-in;
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .favorites__content-item {
     width: 590px;
@@ -601,6 +622,7 @@ input[type='radio']:checked+span {
     width: 100%;
     height: 100%;
 }
+
 
 /* ====  coffee  ==== */
 
@@ -1083,6 +1105,15 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
+@media (max-width: 1230px) {
+
+    .favorite-season {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 @media (max-width: 1024px) {
     .nav__open {
@@ -1152,11 +1183,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (max-width: 768px) {
-    .favorites__tab {
-        flex-wrap: wrap;
-    }
-
     .welcome {
         background-image: url('../img/images/welcome-bg-tablet.jpg');
+    }
+}
+
+@media (max-width: 760px) {
+    .favorites__tab {
+        column-gap: 20px;
     }
 }
